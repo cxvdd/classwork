@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+int main()
+//1
+{
+    int c, counter = 0;
+    cin >> c;
+    while (counter <= c) {
+        cout << counter++ << "";
+        //#2
+        int min, max, n;
+        cin >> min >> max >> n;
+        if (min > max) swap(min, max);
+        while (min <= max) {
+            if (min % n == 0) cout << min << " ";
+            min++;
+            //#3
+            int min, max;
+            cin >> min >> max;
+            if (min > max) swap(min, max);
+            int summ = 0;
+            if (min % 2) min++;
+            while (min <= max) {
+                summ += min;
+                min += 2;
+                cout << summ;
+                //#4
+                int min, max;
+                cin >> min >> max;
+                if (min > max) swap(min, max);
+                while (min <= max) {
+                    cout << max--;
+                    //#5
+                    float min, max, c = 0;
+                    cin >> min >> max;
+                    if (min > max) swap(min, max);
+                    cout << (max - min) / 2;
+                    //#6
+                    int sum = 0;
+                    int n = 1;
+                    while (n != 0) {
+                        cin >> n;
+                        sum += n;
+                    }
+                    cout << sum;
+                    int summ = 0;
+                    int n;
+                    while (true) {
+                        cin >> n;
+                        summ += n;
+                        if (n == 0)break;
+                        cout << summ;
+                        int summ = 0;
+                        int n;
+                        do {
+                            cin >> n;
+                            summ += n;
+                        } while (n != 0);
+                        cout << summ;
+                        //#7
+                        int a, b;
+                        cin >> a >> b;
+                        if (a > b) swap(a, b);
+                        do {
+                            cout << a++ << " ";
+                        } while (a <= b);
+                        //#primer
+                        int n = 1;
+                        while (n < 3) {
+                            cout << n++;
+                            do {
+                                cout << n++;
+                            } while (n < 3);
+                            cout << n;
+                            //#8
+                            int n, min, max;
+                            cin >> min >> max;
+                            if (min > max) swap(min, max);
+                            do {
+                                cin >> n;
+                            } while (n<min || n >max);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
