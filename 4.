@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+int main()
+// FACTORIAL NUM
+//int num;
+//int f = 1;
+//cin >> num;
+//while (num > 1){
+// f = num;
+//}
+//cout << f;
+//diapazon + vivod chelih num
+{
+int a, b;
+cin >> a >> b;
+if (a > b) swap(b, a);
+do {
+cout << a++ << " ";
+} while (a <= b);
+{
+    int n;
+    cout << "Please num: ";
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+     cout << "ky bro" << endl;
+    }
+
+     //Vivod chet num iz 100 
+    int n=100;//
+    for (int i = 0; i <= n; i++) {
+        if (i % 2) {
+        }
+        else cout << i << " ";
+    }
+
+     //Vivod celih num v diapazone
+     int a, b;
+    cin >> a >> b;
+    if (a > b) swap(a, b);
+    do {
+    cout << a++ << " ";
+    } while (a <= b);
+
+    int n = 230;
+    int k = 0;
+    for (int a = n; a / 10 != 0; a /= 10) {
+     k= 10;
+     k += a % 10;
+    }
+    cout << k;
+
+    //srednie arifm
+     int a, b;
+     cin >> a >> b;
+     cout << "srednie arifm " << (a + b) / 2 << endl;
+    }
+    char s;
+    int n;
+    cin >> s;
+    cin >> n;
+    for (int i = 0; i < 3; i++) {
+     for (int i = 0; i < n; i++) {
+     }
+     cout << endl;
+    }
+    char s;
+    int row, column;
+    cout << "input row: ";
+    cin >> row;
+    cout << "input column: ";
+    cin >> column;
+    for (int i = 0; i < row; i++) {
+     for (int j = 0; j < column; j++) {
+     cout << s << " ";
+     }
+     cout << endl;
+    }
+    int n = 5;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - i; j++) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
