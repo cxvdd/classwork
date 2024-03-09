@@ -1,0 +1,93 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    srand(time(NULL));
+    const int SIZE = 10;
+    int array[SIZE];
+    int array2[SIZE];
+    int max = 9;
+    int min = 0;
+    for (int i = 0; i < SIZE; i++) {
+        array[i] = min + rand() % (max + 1 - min);
+        array2[i] = min + rand() % (max + 1 - min);
+        cout << array[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << array2[i] << " ";
+    }
+    cout << endl;
+
+    for (int i = 0, flag; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            if (array[i] == array2[j]) {
+                flag = true;
+                for (int k = 0; k < i; k++) {
+                    if (array[i] == array[k]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    cout << array[i] << " ";
+                    break;
+                }
+                else break;
+            }
+        }
+    }
+
+    for (int i = 0, flag; i < SIZE; i++) {
+        flag = true;
+        for (int j = 0; j < SIZE; j++) {
+            if (array[i] == array2[j]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            for (int k = 0; k < i; k++) {
+                if (array[k] == array[i]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                for (int k = i + 1; k < SIZE; k++) {
+                    if (array[k] == array[i]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) cout << array[i] << " ";
+            }
+        }
+    }
+for (int i = 0, flag; i < SIZE; i++) {
+        flag = true;
+        for (int j = 0; j < SIZE; j++) {
+            if (array2[i] == array[j]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            for (int k = 0; k < i; k++) {
+                if (array2[k] == array2[i]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag) {
+                for (int k = i + 1; k < SIZE; k++) {
+                    if (array2[k] == array2[i]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) cout << array2[i] << " ";
+            }
+        }
+    }
+}
