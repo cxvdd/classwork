@@ -1,0 +1,116 @@
+#include <iostream> 
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "");
+    #1
+        double
+        cout << "input 1: ";
+    cin >> a;
+    cout << "input 2: ";
+    cin >> b;
+    cout << "input 3: ";
+    cin >> c;
+    cout << a << "+" << b << "=" << a + b << endl;
+    cout << a << "-" << b << "=" << a - b << endl;
+    cout << a << "/" << b << "=" << a / b << endl;
+    cout << a << "" << b << "=" << a * b << endl
+    cout << a << "+" << b << "+" << c << "=" << a + b + c << endl;
+    cout << a << "-" << b << "-" << c << "=" << a - b - c << endl;
+    cout << a << "/" << b << "/" << c << "=" << a / b / c << endl;
+    cout << a << "" << b << "" << c << "=" << a * b * c << endl;
+    #2
+        double distance, size;
+        cout << "Масштаб карты(кол-во км в одном см)-> ";
+        cin >> distance;
+        cout << "Растояние между точками, изображающими нас. пункты-> ";
+        cin >> size;
+        cout << "Расстояние между нас.пунктами:" << size * distance << endl;
+        int a, b, c, cxvdd;
+        cin >> cxvdd;
+        a = (cxvdd % 10);
+        b = cxvdd % 100/10;
+        c = (cxvdd % 1000)/100;
+        cout << (a * 100 + b * 10 + c) * 2;
+
+        #3
+        double a, b, c;
+        cout << "Вычисление объёма параллелепипида. \nВедите исходные данные: \n";
+        cout << "длинна(см) ->" << endl;
+        cin >> a;
+        cout << "ширина(см) ->" << endl;
+        cin >> b;
+        cout << "высота(см) ->" << endl;
+        cin >> c;
+        cout << "объём: " << a * b * c << "куб. см." << endl;
+        #4
+        int num = 0;
+            cin >> num;
+            if (num % 2 == 0) {
+                cout << "even";
+            }
+            else {
+                cout << "odd";
+            }
+            { 
+        #5
+                int num, num1;
+                cin >> num, num1;
+                if (num > num1) {
+                    cout << num1;
+                }
+                else {
+                    cout << num1;
+                }
+                cout << endl;
+                cout << ((num > num1)) ? num : num1);
+        }
+        #6
+         int num = 0;
+         cin >> num;
+         if (num > 0) {
+         cout << "bolshe";
+            }
+         else {
+         cout << "menshe";
+            }
+        }
+        #7
+         int num, num1;
+         cin >> num;
+         cin >> num1;
+         if (num = num1) {
+         cout << "ravno";
+            }
+         else {
+         cout << "ne ravno";
+            }
+        }
+        #8
+         double num, num1, num2, num3, num4, num5;
+         cin >> num;
+         cin >> num1;
+         cin >> num2;
+         cin >> num3;
+         cin >> num4;
+         cout << "оценки: " << (num + num1 + num2 + num3 + num4)/5 << endl;
+            }
+        }
+        #9
+         int num;
+         cin >> num;
+            if (num % 2 == 0) {
+             cout << num * 3 << endl;
+            }
+            else {
+             cout << num / 2 << endl;
+            }
+        }
+        #10
+         float a, b;
+         char op; 
+         cin >> a >> b >> op; 
+         if (op == '/') {
+         if (b == 0) cout << "div by 0";
+         else a\b
+        }
