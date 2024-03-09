@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "RU");
+    //1
+    int num1, num2, num3, num;
+    cin >> num >> num1 >> num2 >> num3;
+    if (num1 > num2 && num1 > num3 && num1 > num) {
+     cout << "Max num: " << num1;
+    }
+    else if (num2 > num1 && num2 > num3 && num2 > num) {
+     cout << "Max num: " << num2;
+    }
+    else if (num3 > num1 && num3 > num2 && num3 > num) {
+     cout << " Max num: " << num3;
+    }
+
+    //2
+    int a, b;
+    cin >> a >> b;
+    if (a > b) swap(a, b);
+    do {
+     cout << a++ << " ";
+    } while (a <= b);
+
+    //3
+     float max;
+     cout << "please max number: ";
+     cin >> max;
+     for (float number = 0; number <= max; number += 0.25) {
+     if (number > 0) {
+     cout << number << "; ";
+     }
+    }
+
+    //4
+    int sum = 0;
+    int n = 1;
+    while (n != 0) {
+    cin >> n;
+    sum += n;
+    }
+    cout << sum;
+
+    //5
+    char s;
+    cin >> s;
+    cout << ((s >= 'A' && s <= 'Z' || s >= 'a' && s <= 'z') ? "yes" : "no");
+
+    //7
+    int a, b, n;
+    cout << "Введите границы первого диапазона: " << endl;
+    cin >> a;
+    cout << "Введите границы второго диапазона: " << endl;
+    cin >> b;
+    cout << "Введите число на которое будет делится " << endl;
+    cin >> n;
+    int num = 0;
+    for (int i = a; i <= b; ++i) {
+     if (i % n == 0) {
+     ++num;
+     }
+    }
+    cout << "Количество которое делится на данное число N " << ": " << num << endl;
+    return 0;
+}
