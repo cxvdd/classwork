@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "RU");
+	//const int SIZE1 = 3;
+	//const int SIZE2 = 2;
+	//int sum = 0;
+	//float avg_mark = 0; 
+	//float maxPersSum = 2;
+	//int maxInt = 0; 
+	//int array[SIZE1][SIZE2];
+	//for (int i = 0; i < SIZE1; i++) {
+	//	for (int j = 0; j < SIZE2; j++) {
+	//		array[i][j] = 2 + rand() % 4;  //CУММА ВСЕХ + СРЕДНЕЕ АРИФМЕТИЧЕСКОЕ 
+	//		sum += array[i][j];
+	//		cout << array[i][j] << " ";
+	//		avg_mark += array[i][j];
+	//	}
+	//	if (maxPersSum < avg_mark / SIZE2) {
+	//		maxPersSum = avg_mark / SIZE2;
+	//		maxInt = i; 
+	//	}
+	//	cout << endl;
+	//}
+	//cout << "Ваша сумма равна: " << sum << endl;
+	//cout << "Сумма: " << sum / (SIZE1 + SIZE2);
+	//cout << maxInt; 
+
+ //   	const int SIZE1 = 3;
+	//const int SIZE2 = 4;
+	//int sum = 0;
+	//float avg_mark = 0;
+	//float maxPersSum = 2;
+	//int maxInt = 0;
+	//int array[SIZE1][SIZE2];
+	//cout << "\teng\tlit\trus\tmath" << endl; 
+	//for (int i = 0; i < SIZE1; i++) {
+	//	for (int j = 0; j < SIZE2; j++) {
+	//		array[i][j] = 2 + rand() % 4; 
+	//		cout << " \t" << array[i][j] << "|";	//ТАБЛИЦА
+	//		sum += array[i][j];
+	//		cout << array[i][j] << " ";
+	//		avg_mark += array[i][j];
+	//	}
+	//	if (maxPersSum < avg_mark / SIZE2) {
+	//		maxPersSum = avg_mark / SIZE2;
+	//		maxInt = i;
+	//	}
+	//	cout << endl;
+	//}
+	
+	srand(time(NULL));
+	const int SIZE1 = 5;
+	const int SIZE2 = 4;
+	float sum = 0;
+	float persSum = 0;
+	float maxPersSum = 2;
+	int array[SIZE1][SIZE2];
+
+	int bestSt = 0;
+	float bestAvg = 0;
+	int badSt = 0;
+	float badAvg = 6;
+
+	cout << "\t| eng\t|lit\t|rus\t|math\t|avg" << endl;
+	for (int i = 0; i < SIZE1; i++) {
+		persSum = 0;
+		cout << "st " << i + 1 << "\t";
+		for (int j = 0; j < SIZE2; j++) {
+			array[i][j] = 2 + rand() % 4;
+			cout << "| " << array[i][j] << "\t";
+			persSum += array[i][j];
+		}
+		cout << "|" << persSum / SIZE2;
+		if (bestAvg < persSum / SIZE2) {
+			bestAvg = persSum / SIZE2;
+			bestSt = i;
+		}
+		if (badAvg > persSum / SIZE2) {
+			badAvg = persSum / SIZE2;
+			badSt = i;
+		}
+		cout << endl;
+	}
+	cout << "---------------------------------------------" << endl;
+	for (int j = 0; j < SIZE2; j++) {
+		persSum = 0;
+		for (int i = 0; i < SIZE1; i++) {
+			persSum += array[i][j];
+			sum += array[i][j];
+		}
+		cout << "\t|" << persSum / SIZE1;
+	}
+	cout << "\t|" << sum / (SIZE1 * SIZE2) << endl;
+	cout << "best st: st" << bestSt + 1 << " : " << bestAvg << endl;
+	cout << "bad st:  st" << badSt + 1 << " : " << badAvg << endl;
+}
+
