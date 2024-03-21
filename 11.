@@ -1,0 +1,225 @@
+
+//#include <iostream> 
+//using namespace std;
+//void showLine(int n) {
+//    for (int i = 0; i < 10; i++) {
+//        cout << "/ ";
+//    }
+//    cout << endl;
+//    for (int i = 0; i < 10; i++) {
+//        cout << "| ";
+//    }
+//    cout << endl;
+//
+//    for (int i = 0; i < 4; i++) {
+//        cout << "/ ";
+//    }
+//    cout << "task" << n;
+//    for (int i = 0; i < 3; i++) {
+//        cout << "/ ";
+//    }
+//    cout << endl;
+//
+//    for (int i = 0; i < 10; i++) {
+//        cout << "/ ";
+//    }
+//    cout << endl;
+//
+//    for (int i = 0; i < 10; i++) {
+//        cout << "| ";
+//    }
+//    cout << endl;
+//}
+//
+//void nChis(int n) {
+//    if (n < 0) {
+//        for (int i = 0; i >= n; i--) {
+//            cout << i << " ";
+//        }
+//        cout << endl;
+//
+//    }
+//
+//    else {
+//        for (int i = 0; i <= n; i++) {
+//            cout << i << " ";
+//        }
+//        cout << endl;
+//
+//    }
+//
+//}
+//
+//void prim(int n, int k) {
+//    for (int i = 0; i < k; i++) {
+//        for (int j = 0; j < n; j++) {
+//            cout << "* ";
+//        }
+//        cout << endl;
+//    }
+//}
+//
+//void fac(int fac) {
+//
+//    if (0 < fac) {
+//        int proizved = 1;
+//        for (int i = 1; i <= fac; i++) {
+//            proizved *= i;
+//        }
+//        cout << proizved << endl;
+//    }
+//    else if (fac < 0) cout << 0;
+//
+//    else cout << 1 << endl;
+//}
+//
+//void prostChis(int num) {
+//    int flag = true;
+//    for (int i = 2; i < 10; i++) {
+//        if (i == num) {}
+//        else if (num % i == 0) {
+//            flag = false;
+//            break;
+//        }
+//    }
+//    if (flag) cout << "simple";
+//    else cout << "not simple";
+//}
+//
+//void prost() {
+//    for (int j = 1; j <= 100; j++) {
+//        int flag = true;
+//        for (int i = 2; i < 10; i++) {
+//            if (i == j) {}
+//            else if (j % i == 0) {
+//                flag = false;
+//                break;
+//            }
+//        }
+//        if (flag) cout << j << endl;
+//    }
+//}
+//
+//int main()
+//{
+//    /*
+//    showLine(1);
+//
+//
+//    int n;
+//    cout << "Input number: ";
+//    cin >> n;
+//    cout << "Your number: " << n << endl;
+//
+//    showLine(2);
+//
+//
+//
+//    cout << "task 2: " << endl;
+//    ;
+//    for (int i = 0; i < 10; i++) {
+//     cout << "5 ";
+//    }
+//    cout << endl;
+//    showLine(3);
+//
+//
+//    for (int i = 1; i < 11; i++) {
+//     cout << i<<" ";
+//    }
+//    */
+//
+//    //nChis(99999999999); 
+//
+//    prim(5, 8);
+//
+//    fac(0);
+//
+//    prostChis(4);
+//
+//    prost();
+//}
+//void max(int a1, int a2, int a3, int a4, int a5) {
+//    if (a1 < a2) a1 = a2;
+//    if (a1 < a3) a1 = a3;
+//    if (a1 < a4) a1 = a4;
+//    if (a1 < a5) a1 = a5;
+//    cout << a5;
+//
+//    //int max(int a, int b) {
+//    //    if (a > b) {
+//    //        return a;
+//    //    }
+//    //    else {
+//    //        return b;
+//    //    }
+//    //}
+//    //int main() {
+//    //    setlocale(LC_ALL, "RU");
+//    //    int a, b;
+//    //    cout << "Введите 2 числа: ";
+//    //    cin >> a >> b;
+//    //    int result = max(a, b);
+//    //    cout << "Большее число: " << result << endl;
+//    //    return 0;
+//    //}
+////bool simple(int n) {
+////    for (int i = 2; i <= sqrt(n); i++) {
+////        if (n % i == 0) {
+////            return false;
+////        }
+////    }
+////    return true;
+////}
+////int cube(int number) {
+////    return number * number * number;
+////}
+//int main() {
+////    setlocale(LC_ALL, "RU");
+////    int number;
+////        cout << "Введите число: ";
+////    cin >> number; 
+////    int result = cube(number);
+////    cout << "куб числа " << number << " это " << result << std::endl;
+////
+////    return 0;
+////}
+////3
+//myswap
+//
+//#include <iostream> 
+//using namespace std;
+//	void myswap(int& a, int& b) {
+//				a = a + b;
+//				b = a - b;
+//				a = a - b;
+//	}
+//
+//int main()
+//{
+//	setlocale(LC_ALL, "RUS");
+//	float a = 2.8; 
+//	float b = 3; 
+//	cout << a << " " << b << endl; 
+//	myswap(a, b);
+//	cout << a << " " << b << endl;
+//}
+#include <iostream>
+using namespace std;
+int main() {
+    setlocale(LC_ALL, "RU");
+    int size;
+    cout << "Введите размер крестика: ";
+    cin >> size;
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (i == 0 || j == 0 || i == size - 1 || j == size - 1)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
